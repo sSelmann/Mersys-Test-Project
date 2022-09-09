@@ -38,7 +38,7 @@ public class DialogContent extends Parent{
     private WebElement codeInput;
 
     @FindBy(xpath="//ms-save-button//button")
-    private WebElement saveButton;
+    public WebElement saveButton;
 
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
@@ -59,7 +59,7 @@ public class DialogContent extends Parent{
     private WebElement searchButton;
 
     @FindBy(xpath = "//ms-delete-button//button")
-    private WebElement deleteButton;
+    public WebElement deleteButton;
 
     @FindBy(xpath = "//span[contains(text(),'Delete')]")
     private WebElement deleteDialogBtn;
@@ -72,6 +72,22 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")
     private WebElement acceptCookies;
+
+    //GR5-4//
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'GENERAL.BUTTON.ADD')]//button")
+    private WebElement Add4;
+
+    @FindBy(xpath = "(//ms-edit-button//button)[1]")
+    public WebElement Edi4;
+
+    @FindBy(xpath = "(//div[@class='ng-star-inserted']//button)[2]")
+    public WebElement deleteDialogBtn4;
+
+    //GR5-4//
+
+
+
+
 
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
@@ -104,6 +120,13 @@ public class DialogContent extends Parent{
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
 
+            //GR5-4
+            case "Edi4" : myElement =Edi4; break;
+            case "Add4" : myElement =Add4; break;
+            case "deleteDialogBtn4" : myElement =deleteDialogBtn4; break;
+            //GR5-4
+
+
         }
 
         clickFunction(myElement);
@@ -116,6 +139,8 @@ public class DialogContent extends Parent{
             case "dashboard" : myElement =dashboard; break;
             case "successMessage" : myElement =successMessage; break;
             case "alreadyExist" : myElement =alreadyExist; break;
+
+
         }
 
         verifyContainsText(myElement,text);
@@ -123,11 +148,11 @@ public class DialogContent extends Parent{
 
 
     public void SearchAndDelete(String searchText){
+
         findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
 
         waitUntilLoading();
-
         findAndClick("deleteButton");// silme butonua bas
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
     }
