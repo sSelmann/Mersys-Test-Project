@@ -73,6 +73,10 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")
     private WebElement acceptCookies;
 
+
+    @FindBy(xpath = "//ms-edit-button//button")
+    public WebElement editButton;
+
     //GR5-4//
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'GENERAL.BUTTON.ADD')]//button")
     private WebElement Add4;
@@ -84,10 +88,6 @@ public class DialogContent extends Parent{
     public WebElement deleteDialogBtn4;
 
     //GR5-4//
-
-
-
-
 
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
@@ -119,18 +119,33 @@ public class DialogContent extends Parent{
             case "deleteButton" : myElement =deleteButton; break;
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
-
-            //GR5-4
+            case "editButton" : myElement =editButton; break;
             case "Edi4" : myElement =Edi4; break;
             case "Add4" : myElement =Add4; break;
             case "deleteDialogBtn4" : myElement =deleteDialogBtn4; break;
             //GR5-4
-
-
         }
 
         clickFunction(myElement);
     }
+    public void findAndClick2(String strElement){  // 2.aşama
+        // burda string isimden weblemente ulaşıcam
+        switch (strElement)
+        {
+            case "loginButton" : myElement =loginButton; break;
+            case "addButton" : myElement =addButton; break;
+            case "saveButton" : myElement =saveButton; break;
+            case "closeDialog" : myElement =closeDialog; break;
+            case "searchButton" : myElement =searchButton; break;
+            case "deleteButton" : myElement =deleteButton; break;
+            case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
+            case "acceptCookies" : myElement =acceptCookies; break;
+            case "editButton" : myElement =editButton; break;
+        }
+
+        clickFunction(myElement);
+    }
+
 
     public void findAndContainsText(String strElement, String text){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -142,7 +157,6 @@ public class DialogContent extends Parent{
 
 
         }
-
         verifyContainsText(myElement,text);
     }
 
@@ -156,17 +170,4 @@ public class DialogContent extends Parent{
         findAndClick("deleteButton");// silme butonua bas
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
