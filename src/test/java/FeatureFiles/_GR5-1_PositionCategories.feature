@@ -5,7 +5,8 @@ Feature: Position Categories
     Then User should login successfuly
 
   Scenario: Add
-    
+
   Scenario: Edit
 
   Scenario: Delete
+
