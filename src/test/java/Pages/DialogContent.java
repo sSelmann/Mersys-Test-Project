@@ -128,24 +128,6 @@ public class DialogContent extends Parent{
 
         clickFunction(myElement);
     }
-    public void findAndClick2(String strElement){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
-        switch (strElement)
-        {
-            case "loginButton" : myElement =loginButton; break;
-            case "addButton" : myElement =addButton; break;
-            case "saveButton" : myElement =saveButton; break;
-            case "closeDialog" : myElement =closeDialog; break;
-            case "searchButton" : myElement =searchButton; break;
-            case "deleteButton" : myElement =deleteButton; break;
-            case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
-            case "acceptCookies" : myElement =acceptCookies; break;
-            case "editButton" : myElement =editButton; break;
-        }
-
-        clickFunction(myElement);
-    }
-
 
     public void findAndContainsText(String strElement, String text){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
