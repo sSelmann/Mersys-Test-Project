@@ -99,9 +99,9 @@ public class _GR5_4_SetupSteps {
 
     @And("Going To Fields")
     public void goingToFields() {
+        ln.findAndClick("setupOne");
+        ln.findAndClick("parameters");
+        ln.findAndClick("fieldsUnderParameters");
 
-        ln.findAndClick("Setup4");
-        ln.findAndClick("Parameters4");
-        ln.findAndClick("Fields4");
     }
     }
