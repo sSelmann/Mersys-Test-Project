@@ -77,6 +77,12 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-edit-button//button")
     public WebElement editButton;
 
+    @FindBy(xpath = "(//*[contains(@class,'mat-select-arrow-wrapper ng')])[3]")
+    private WebElement arrowThree;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[4]")
+    private WebElement dropDownOptionFour;
+
     //GR5-4//
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'GENERAL.BUTTON.ADD')]//button")
     private WebElement Add4;
@@ -123,6 +129,8 @@ public class DialogContent extends Parent{
             case "Edi4" : myElement =Edi4; break;
             case "Add4" : myElement =Add4; break;
             case "deleteDialogBtn4" : myElement =deleteDialogBtn4; break;
+            case "arrowThree" : myElement =arrowThree; break;
+            case "dropDownOptionFour" : myElement =dropDownOptionFour; break;
             //GR5-4
         }
 
