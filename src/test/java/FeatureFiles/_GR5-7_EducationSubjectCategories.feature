@@ -1,17 +1,22 @@
 Feature: Position Categories
+
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-    And Going to Human Resources Setup Attestations
+    And Going to Education Setup Subject Categories
 
-  Scenario: GR5-2 Attestations Add-Edit-Delete
+  Scenario: GR5-7 Subject Categories Add-Edit-Delete
 
     And Add
       | addButton |
 
     And Info
-      | nameInput | selamunko |
+      | nameInput | selamunko11 |
+      | codeInput | aleykumko11 |
+
+    And ActiveAndDeactive
+      | activeButton |
 
     And Save
       | saveButton |
@@ -19,7 +24,8 @@ Feature: Position Categories
     Then User should login successfully2
 
     And Search Info
-      | searchInput | selamunko |
+      | searchInput | selamunko11 |
+      | codeInput2  | aleykumko11 |
 
     And Search
       | searchButton |
@@ -28,7 +34,11 @@ Feature: Position Categories
       | editButton |
 
     And Info
-      | nameInput | haniko |
+      | nameInput | haniko11 |
+      | codeInput | duduko11 |
+
+    And ActiveAndDeactive
+      | activeButton |
 
     And Save
       | saveButton |
@@ -36,7 +46,8 @@ Feature: Position Categories
     Then User should login successfully2
 
     And Search Info
-      | searchInput | haniko |
+      | searchInput | haniko11 |
+      | codeInput2  | duduko11 |
 
     And Search
       | searchButton |
@@ -48,3 +59,5 @@ Feature: Position Categories
       | deleteDialogBtn |
 
     Then User should login successfully2
+
+
