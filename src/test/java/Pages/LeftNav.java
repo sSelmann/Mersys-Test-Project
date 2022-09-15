@@ -48,6 +48,26 @@ public class LeftNav extends Parent{
     private WebElement subjectCategoriesUnderEducation;
 
 
+    @FindBy(xpath = "//span[text()='School Setup']")
+    private WebElement schoolSetupUnderSetup;
+
+    @FindBy(xpath = "//span[text()='Locations']")
+    private WebElement locationUnderSchoolSetup;
+
+    @FindBy(xpath = "//span[text()='Departments']")
+    private WebElement departmentsUnderSchoolSetup;
+
+    @FindBy(xpath = "//span[text()='Bank Accounts']")
+    private WebElement bankAccountsUnderSetupParameters;
+
+    @FindBy(xpath = "//span[text()='Grade Levels']")
+    private WebElement gradeLevelsUnderSetupParameters;
+
+    @FindBy(xpath = "//span[text()='Discounts']")
+    private WebElement discountsUnderSetupParameters;
+
+    @FindBy(xpath = "//span[text()='Nationalities']")
+    private WebElement nationalitiesSetupParameters;
 
     WebElement myElement;
     public void findAndClick(String strElement){  // 2.aşama
@@ -66,6 +86,13 @@ public class LeftNav extends Parent{
             case "education" : myElement =education; break;
             case "setupUnderEducation" : myElement =setupUnderEducation; break;
             case "subjectCategoriesUnderEducation" : myElement =subjectCategoriesUnderEducation; break;
+            case "schoolSetupUnderSetup" : myElement =schoolSetupUnderSetup; break;
+            case "locationUnderSchoolSetup" : myElement =locationUnderSchoolSetup; break;
+            case "departmentsUnderSchoolSetup" : myElement =departmentsUnderSchoolSetup; break;
+            case "bankAccountsUnderSetupParameters" : myElement =bankAccountsUnderSetupParameters; break;
+            case "gradeLevelsUnderSetupParameters" : myElement =gradeLevelsUnderSetupParameters; break;
+            case "discountsUnderSetupParameters" : myElement =discountsUnderSetupParameters; break;
+            case "nationalitiesSetupParameters" : myElement =nationalitiesSetupParameters; break;
 
         }
 
