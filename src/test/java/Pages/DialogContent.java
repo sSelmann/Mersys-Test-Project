@@ -95,6 +95,12 @@ public class DialogContent extends Parent{
 
     //GR5-4//
 
+    @FindBy(xpath = "(//input[contains (@class,'mat-input-element')])[2]")
+    public WebElement codeInput2;
+
+    @FindBy(xpath = "//span[text()='Active']")
+    public WebElement activeButton;
+
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -108,6 +114,7 @@ public class DialogContent extends Parent{
             case "searchInput" : myElement =searchInput; break;
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
+            case "codeInput2" : myElement =codeInput2; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -131,7 +138,9 @@ public class DialogContent extends Parent{
             case "deleteDialogBtn4" : myElement =deleteDialogBtn4; break;
             case "arrowThree" : myElement =arrowThree; break;
             case "dropDownOptionFour" : myElement =dropDownOptionFour; break;
+            case "activeButton" : myElement =activeButton; break;
             //GR5-4
+
         }
 
         clickFunction(myElement);
