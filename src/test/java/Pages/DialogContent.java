@@ -55,7 +55,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//div[contains(@class,'mat-form-field-infix ng-tns-c74')]//input)[1]")
     private WebElement searchInput;
 
-    @FindBy(xpath = "//ms-search-button//button")
+    @FindBy(xpath = "//ms-search-button//button//span")
     private WebElement searchButton;
 
     @FindBy(xpath = "//ms-delete-button//button")
@@ -64,7 +64,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//span[contains(text(),'Delete')]")
     private WebElement deleteDialogBtn;
 
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
+    @FindBy(xpath = "(//input[@id='ms-text-field-3'])[1]")
     private WebElement integrationCode;
 
     @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
@@ -73,6 +73,8 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")
     private WebElement acceptCookies;
 
+    @FindBy(xpath = "(//input[@id='ms-text-field-2'])[1]")
+    private WebElement description;
 
     @FindBy(xpath = "//ms-edit-button//button")
     public WebElement editButton;
@@ -82,6 +84,9 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath = "(//mat-option[@role='option']/span)[4]")
     private WebElement dropDownOptionFour;
+
+    @FindBy(xpath = "//input[@id='ms-text-field-0']")
+    private WebElement descriptionInput;
 
     //GR5-4//
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'GENERAL.BUTTON.ADD')]//button")
@@ -108,6 +113,8 @@ public class DialogContent extends Parent{
             case "searchInput" : myElement =searchInput; break;
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
+            case "description" : myElement =description; break;
+            case "descriptionInput" : myElement =descriptionInput; break;
         }
 
         sendKeysFunction(myElement, value);
