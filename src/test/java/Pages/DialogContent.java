@@ -95,6 +95,16 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//ms-edit-button//button)[1]")
     public WebElement Edi4;
 
+    @FindBy(xpath = "(//textarea[@formcontrolname='description']")
+    public WebElement description2;
+
+    @FindBy(xpath = "(//mat-option[@class='mat-option mat-focus-indicator mat-option-multiple mat-active ng-tns-c93-83 ng-star-inserted mat-selected']")
+    public WebElement stage;
+
+
+    @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']")
+    public WebElement stage2;
+
     @FindBy(xpath = "(//div[@class='ng-star-inserted']//button)[2]")
     public WebElement deleteDialogBtn4;
 
@@ -122,6 +132,7 @@ public class DialogContent extends Parent{
             case "description" : myElement =description; break;
             case "descriptionInput" : myElement =descriptionInput; break;
             case "codeInput2" : myElement =codeInput2; break;
+            case "description2" : myElement =codeInput2; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -146,7 +157,9 @@ public class DialogContent extends Parent{
             case "arrowThree" : myElement =arrowThree; break;
             case "dropDownOptionFour" : myElement =dropDownOptionFour; break;
             case "activeButton" : myElement =activeButton; break;
-            //GR5-4
+            case "stage" : myElement =stage; break;
+            case "stage2" : myElement =stage2; break;
+
 
         }
 
