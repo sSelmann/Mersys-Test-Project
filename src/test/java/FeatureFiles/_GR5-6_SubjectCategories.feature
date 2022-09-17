@@ -1,83 +1,73 @@
-Feature:  Add-Edit-Delete Document Types under Parameters Setup
+Feature:  Add-Edit-Delete Subject Categories
 
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
 
-  Scenario:Add Document Categories
+  Scenario:Add Subject Categories
 
     Given Click on the element in the left Nav
-      | setupOne                     |
-      | parameters                   |
-      | documentTypesUnderParameters |
+      | education                       |
+      | setupUnderEducation             |
+      | subjectCategoriesUnderEducation |
 
     When Click on the element in the Dialog Content
       | addButton |
 
     And User sending the keys in Dialog content
-      | nameInput | Internship Certificate |
-
-    And Click on the element in the Dialog Content
-      | arrowThree         |
-      | dropDownOptionFour |
-
-    And Click ROBOT TAB on the element in the Dialog Content
+      | nameInput | grup5 |
+      | codeInput | 8523  |
 
     And Click on the element in the Dialog Content
       | saveButton |
 
     Then Success message should be displayed
 
-  Scenario: Edit Document Categories
+  Scenario:  Edit Subject Categories
 
     Given Click on the element in the left Nav
-      | setupOne                     |
-      | parameters                   |
-      | documentTypesUnderParameters |
+      | education                       |
+      | setupUnderEducation             |
+      | subjectCategoriesUnderEducation |
 
     When User searches for the desired item in the Dialog Content
-      | searchInput | Internship Certificate |
+
+      | searchInput2 | grup5 |
 
     And Click on the element in the Dialog Content
       | searchButton |
       | editButton   |
 
     And User sending the keys in Dialog content
-      | nameInput | Documents |
+      | nameInput | Human |
 
     And Click on the element in the Dialog Content
       | saveButton |
 
     Then Success message should be displayed
 
-  Scenario: Delete Document Categories
+  Scenario: Delete Subject Categories
 
     Given Click on the element in the left Nav
-      | setupOne                     |
-      | parameters                   |
-      | documentTypesUnderParameters |
+      | education                       |
+      | setupUnderEducation             |
+      | subjectCategoriesUnderEducation |
+
 
     When User searches for the desired item in the Dialog Content
-      | searchInput | Documents |
+      | searchInput2 | Human |
 
     And Click on the element in the Dialog Content
-      | searchButton     |
+      | searchButton |
 
     And Click delete Button on Dialog Content
-      | deleteButton   |
+      | deleteButton |
 
     Then Click delete on Popup
-      | deleteDialogBtn4   |
+      | deleteDialogBtn4 |
 
     Then Success message should be displayed
-
-
-
-
-
-
-
 
 
 

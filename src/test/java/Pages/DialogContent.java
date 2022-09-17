@@ -58,6 +58,9 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-search-button//button//span")
     private WebElement searchButton;
 
+    @FindBy(xpath = "(//ms-text-field//input)[1]")
+    private WebElement searchInput2;
+
     @FindBy(xpath = "//ms-delete-button//button")
     public WebElement deleteButton;
 
@@ -108,6 +111,18 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//div[@class='ng-star-inserted']//button)[2]")
     public WebElement deleteDialogBtn4;
 
+    @FindBy(xpath="//ms-masked-text-field[@formcontrolname='iban']//input")
+    private WebElement ibanInput;
+
+    @FindBy(xpath="(//span[contains(text(),'Currency')])[3]")
+    private WebElement currency;
+
+    @FindBy(xpath="(//span[contains(text(),'USD')])")
+    private WebElement currencyUsa;
+
+    @FindBy(xpath="//ms-text-field[@formcontrolname='integrationCode']//input")
+    private WebElement integrationCodeBank;
+
     //GR5-4//
 
     @FindBy(xpath = "(//input[contains (@class,'mat-input-element')])[2]")
@@ -127,12 +142,15 @@ public class DialogContent extends Parent{
             case "codeInput" : myElement =codeInput; break;
             case "shortName" : myElement =shortName; break;
             case "searchInput" : myElement =searchInput; break;
+            case "searchInput2" : myElement =searchInput2; break;
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
             case "description" : myElement =description; break;
             case "descriptionInput" : myElement =descriptionInput; break;
             case "codeInput2" : myElement =codeInput2; break;
             case "description2" : myElement =codeInput2; break;
+            case "ibanInput" : myElement =ibanInput; break;
+            case "integrationCodeBank" : myElement = integrationCodeBank; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -159,7 +177,9 @@ public class DialogContent extends Parent{
             case "activeButton" : myElement =activeButton; break;
             case "stage" : myElement =stage; break;
             case "stage2" : myElement =stage2; break;
-
+            case "currency" : myElement =currency; break;
+            case "currencyUsa" : myElement =currencyUsa; break;
+            //GR5-4
 
         }
 
