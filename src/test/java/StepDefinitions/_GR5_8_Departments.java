@@ -12,8 +12,8 @@ public class _GR5_8_Departments {
 
     @And("Click delete Button on Dialog Content")
     public void clickDeleteButtononDialogContent(DataTable elements) {
-
         dc.waitUntilClickable(dc.deleteButton);
+       // dc.waitUntilClickable(dc.deleteButton);
         List<String> listElement = elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {
@@ -23,7 +23,6 @@ public class _GR5_8_Departments {
 
     @And("Click edit button on Dialog Content")
     public void ClickeditButtononDialogContent(DataTable elements) {
-
         dc.waitUntilClickable(dc.editButton);
         List<String> listElement = elements.asList(String.class);
 

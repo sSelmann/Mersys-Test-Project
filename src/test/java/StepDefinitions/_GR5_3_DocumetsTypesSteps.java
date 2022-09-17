@@ -20,6 +20,7 @@ public class _GR5_3_DocumetsTypesSteps {
 
     @When("Click on the element in the Dialog Content")
     public void clickOnTheElementInTheDialog(DataTable elements) {
+        dc.waitUntilClickable(dc.editButton);
         List<String> listElement = elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {
