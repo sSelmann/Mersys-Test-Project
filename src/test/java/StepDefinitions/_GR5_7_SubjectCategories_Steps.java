@@ -61,7 +61,6 @@ public class _GR5_7_SubjectCategories_Steps {
         List<String> listElement = elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {
-            //   System.out.println("listElement = " + listElement.get(i));
             dc.findAndClick(listElement.get(i));
         }
 

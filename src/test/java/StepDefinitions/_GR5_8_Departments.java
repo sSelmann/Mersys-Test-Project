@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
-import Pages.LeftNav;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 
@@ -13,7 +12,6 @@ public class _GR5_8_Departments {
     @And("Click delete Button on Dialog Content")
     public void clickDeleteButtononDialogContent(DataTable elements) {
         dc.waitUntilClickable(dc.deleteButton);
-       // dc.waitUntilClickable(dc.deleteButton);
         List<String> listElement = elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {

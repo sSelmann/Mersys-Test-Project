@@ -1,6 +1,5 @@
 package Runners;
 
-
 import Utilities.GWD;
 import com.aventstack.extentreports.service.ExtentService;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -16,13 +15,11 @@ import org.testng.annotations.Parameters;
 )
 public class _01_TestRunner extends AbstractTestNGCucumberTests {
 
-    @BeforeClass(alwaysRun = true) // bazı java versiyon hatalırı için
+    @BeforeClass(alwaysRun = true)
     @Parameters("browser")
     public void beforeClass(String browser)
     {
         GWD.threadBrowserName.set(browser);
-       //burada browser set edilecek
-        // bu threade browsername set edildi.
     }
 
     @AfterClass

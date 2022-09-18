@@ -18,7 +18,6 @@ public class _GR5_4_SetupSteps {
         List<String> listElement = elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {
-            //   System.out.println("listElement = " + listElement.get(i));
             dc.findAndClick(listElement.get(i));
         }
 
@@ -29,7 +28,6 @@ public class _GR5_4_SetupSteps {
         List<String> listElement = elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {
-            //   System.out.println("listElement = " + listElement.get(i));
             dc.findAndClick(listElement.get(i));
         }
     }
@@ -61,21 +59,17 @@ public class _GR5_4_SetupSteps {
         List<String> listElement = elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {
-            //   System.out.println("listElement = " + listElement.get(i));
             dc.findAndClick(listElement.get(i));
         }
     }
 
     @And("Delete")
     public void delete(DataTable elements) throws InterruptedException {
-
-        //    Thread.sleep(1000);
         dc.waitUntilVisible(dc.deleteButton);
 
         List<String> listElement = elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {
-            //   System.out.println("listElement = " + listElement.get(i));
             dc.findAndClick(listElement.get(i));
         }
     }
@@ -87,7 +81,6 @@ public class _GR5_4_SetupSteps {
         List<String> listElement = elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {
-            //   System.out.println("listElement = " + listElement.get(i));
             dc.findAndClick(listElement.get(i));
         }
     }

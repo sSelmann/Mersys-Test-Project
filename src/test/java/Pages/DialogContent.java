@@ -1,14 +1,9 @@
 package Pages;
 
 import Utilities.GWD;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class DialogContent extends Parent{
 
@@ -132,8 +127,7 @@ public class DialogContent extends Parent{
     public WebElement activeButton;
 
     WebElement myElement;
-    public void findAndSend(String strElement, String value){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndSend(String strElement, String value){
         switch (strElement)
         {
             case "username" : myElement =username; break;
@@ -156,8 +150,7 @@ public class DialogContent extends Parent{
         sendKeysFunction(myElement, value);
     }
 
-    public void findAndClick(String strElement){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndClick(String strElement){
         switch (strElement)
         {
             case "loginButton" : myElement =loginButton; break;
@@ -186,27 +179,13 @@ public class DialogContent extends Parent{
         clickFunction(myElement);
     }
 
-    public void findAndContainsText(String strElement, String text){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndContainsText(String strElement, String text){
         switch (strElement)
         {
             case "dashboard" : myElement =dashboard; break;
             case "successMessage" : myElement =successMessage; break;
             case "alreadyExist" : myElement =alreadyExist; break;
-
-
         }
         verifyContainsText(myElement,text);
-    }
-
-
-    public void SearchAndDelete(String searchText){
-
-        findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
-        findAndClick("searchButton"); // arama butonuna bas
-
-        waitUntilLoading();
-        findAndClick("deleteButton");// silme butonua bas
-        findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
     }
 }

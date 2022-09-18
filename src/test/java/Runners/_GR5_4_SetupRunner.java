@@ -1,6 +1,5 @@
 package Runners;
 
-import Utilities.GWD;
 import com.aventstack.extentreports.service.ExtentService;
 import com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
